@@ -92,6 +92,7 @@ app.post('/repositories/:id/like', (request, response) => {
   }
 
   const repositoryUptade = {
+    ...repositories[repositoryIndex],
     id,
     likes: repositories[repositoryIndex].likes + 1,
   };
